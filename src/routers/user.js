@@ -9,7 +9,7 @@ const { $conditionalHandlers } = require("mongoose/lib/schema/boolean");
 const router = new express.Router();
 
 const client = new OAuth2Client(
-  "87219646630-f4a7pn7t8uraj06t2fhh4dh1o7r5sjo9.apps.googleusercontent.com"
+  "481600708346-ghmkhk0qnapn79mn821laqps90pt1mi4.apps.googleusercontent.com"
 );
 
 router.post("/users", async (req, res) => {
@@ -44,7 +44,7 @@ router.post("/users/googlelogin", async (req, res) => {
     .verifyIdToken({
       idToken: tokenId,
       audience:
-        "87219646630-f4a7pn7t8uraj06t2fhh4dh1o7r5sjo9.apps.googleusercontent.com",
+        "481600708346-ghmkhk0qnapn79mn821laqps90pt1mi4.apps.googleusercontent.com",
     })
     .then((response) => {
       const { email_verified, name, email, at_hash } = response.payload;
