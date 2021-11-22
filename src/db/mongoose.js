@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-
-mongoose.connect("mongodb+srv://amitpaswan123:Amit*paswan1@cluster0.fspaw.mongodb.net/test", {
+const url=`mongodb+srv://${process.env.MONGO_UID}:${process.env.MONGO_PASS}@cluster0.fspaw.mongodb.net/test`
+mongoose.connect(url, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
